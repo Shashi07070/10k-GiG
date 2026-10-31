@@ -1,0 +1,6 @@
+{
+  "name": "₹10K Delivery Challenge Tracker",
+  "description": "Offline-first AMOLED PWA for Yulu e-bike delivery riders in Hyderabad to track daily orders, battery swaps, expenses, and net profit toward a ₹10,000 7-day challenge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

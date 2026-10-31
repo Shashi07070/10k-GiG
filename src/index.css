@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root,
+  html,
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color-scheme: dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbars for AMOLED dark mode */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F1F1F;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC83D;
+}
+
+/* Remove number input spinners for clean mobile numeric entry */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Custom Range Slider for AMOLED What-If Calculator */
+input[type='range'].amoled-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #141414;
+  height: 8px;
+  border-radius: 999px;
+  border: 1px solid #1F1F1F;
+}
+input[type='range'].amoled-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #FFC83D;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(255, 200, 61, 0.75);
+  border: 2px solid #000000;
+}
+input[type='range'].amoled-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #FFC83D;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(255, 200, 61, 0.75);
+  border: 2px solid #000000;
+}
